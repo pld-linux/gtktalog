@@ -5,8 +5,6 @@ Version:	0.99.16
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
-Group(de):	Applikationen/Archivierung
-Group(pl):	Aplikacje/Archiwizacja
 Source0:	http://prdownloads.sourceforge.net/gtktalog/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-path.patch
 URL:		http://gtktalog.sourceforge.net/
