@@ -97,9 +97,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	Applicationsdir=%{_applnkdir}/Utilities
 
-gzip -9nf AUTHORS ChangeLog Docs/README.{catalog3,data_representation} \
-	NEWS README TODO
-
 %find_lang %{name} --with-gnome
 
 %clean
@@ -107,7 +104,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz Docs/*.gz
+%doc AUTHORS ChangeLog Docs/README.{catalog3,data_representation} \
+	NEWS README TODO
 %attr(755,root,root) %{_bindir}/gtktalog
 %{_mandir}/man?/*
 %dir %{_libdir}/gtktalog
