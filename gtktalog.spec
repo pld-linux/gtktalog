@@ -1,18 +1,19 @@
 Summary:	The Gnome disk catalog
 Summary(pl):	Program do katalogowania p³yt CD dla ¶rodowiska GNOME
 Name:		gtktalog
-Version:	1.0.2
+Version:	1.0.3
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://savannah.nongnu.org/download/gtktalog/gtktalog.pkg/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	ac1c64dbe62ad7d6620ec94d094187b7
+# Source0-md5:	a67989c31ada498853b55e5c3f879e32
 Patch0:		%{name}-path.patch
 Patch1:		%{name}-amfix.patch
 URL:		http://www.freesoftware.fsf.org/gtktalog/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
+BuildRequires:	gnome-vfs2-devel
 BuildRequires:	libgnomeui-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
@@ -89,6 +90,8 @@ rm -f missing
 	--enable-modinfo \
 	--enable-aviinfo \
 	--enable-mpeginfo \
+	--enable-gnomevfs \
+	--enable-fixcd \
 	--disable-eject
 %{__make}
 
@@ -106,11 +109,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog Docs/README.{catalog3,data_representation} NEWS README TODO
-%attr(755,root,root) %{_bindir}/gtktalog
-%{_mandir}/man?/*
-%dir %{_libdir}/gtktalog
-%attr(755,root,root) %{_libdir}/gtktalog/*
-%{_applnkdir}/Utilities/gtktalog.desktop
-%{_datadir}/gtktalog
-%{_pixmapsdir}/gtktalog.png
+%doc AUTHORS ChangeLog Docs/README.{catalog*,data_representation,Linux} NEWS README TODO
+%attr(755,root,root) %{_bindir}/%{name}
+%{_mandir}/man1/*
+%dir %{_libdir}/%{name}
+%attr(755,root,root) %{_libdir}/%{name}/*
+%{_applnkdir}/Utilities/*
+%{_datadir}/%{name}
+%{_pixmapsdir}/*
