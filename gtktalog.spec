@@ -1,8 +1,12 @@
+#
+# Note: it's not work with -enable-gnome20
+# and gtk2
+#
 Summary:	The GNOME disk catalog
 Summary(pl):	Program do katalogowania p³yt CD dla ¶rodowiska GNOME
 Name:		gtktalog
 Version:	1.0.4
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://savannah.nongnu.org/download/%{name}/%{name}.pkg/%{version}/%{name}-%{version}.tar.bz2
@@ -14,8 +18,7 @@ URL:		http://www.freesoftware.fsf.org/gtktalog/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-vfs2-devel
-BuildRequires:	libgnomeui-devel
+BuildRequires:	gnome-libs-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -82,20 +85,21 @@ rm -f missing
 %{__autoheader}
 %{__automake}
 %{__autoconf}
+
 %configure \
+	--disable-gnome20 \
+	--disable-gnomevfs \
 	--enable-pthreads \
 	--enable-catalog2 \
 	--enable-catalog3 \
-	--enable-gnome20 \
 	--enable-htmltitle \
 	--enable-mp3info \
 	--enable-modinfo \
 	--enable-aviinfo \
 	--enable-mpeginfo \
-	--enable-gnomevfs \
 	--enable-fixcd \
 	--disable-eject
-%{__make}
+%{__make} 
 
 %install
 rm -rf $RPM_BUILD_ROOT
