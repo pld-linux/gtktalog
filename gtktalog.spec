@@ -6,7 +6,7 @@ Summary:	The GNOME disk catalog
 Summary(pl):	Program do katalogowania p³yt CD dla ¶rodowiska GNOME
 Name:		gtktalog
 Version:	1.0.4
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://savannah.nongnu.org/download/%{name}/%{name}.pkg/%{version}/%{name}-%{version}.tar.bz2
