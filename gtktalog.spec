@@ -77,7 +77,7 @@ gettextize --copy --force
 aclocal -I macros
 autoheader
 automake --add-missing --copy
-autoconf
+%{__autoconf}
 %configure \
 	--enable-pthreads \
 	--enable-catalog2 \
