@@ -9,6 +9,7 @@ Source0:	http://savannah.nongnu.org/download/%{name}/%{name}.pkg/%{version}/%{na
 # Source0-md5:	54ed43256a0d11d078f67485e0a80e0a
 Patch0:		%{name}-path.patch
 Patch1:		%{name}-amfix.patch
+Patch2:		%{name}-desktop.patch
 URL:		http://www.freesoftware.fsf.org/gtktalog/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -71,6 +72,7 @@ html, mpeg).
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing
