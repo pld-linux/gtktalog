@@ -1,24 +1,25 @@
 Summary:	The Gnome disk catalog
 Summary(pl):	Program do katalogowania p³yt CD dla ¶rodowiska GNOME
 Name:		gtktalog
-Version:	0.99.19
+Version:	1.0.2
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://savannah.nongnu.org/download/gtktalog/gtktalog.pkg/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	90ff0a0e8b80383237ef10fff636417a
 Patch0:		%{name}-path.patch
+Patch1:		%{name}-amfix.patch
 URL:		http://www.freesoftware.fsf.org/gtktalog/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-libs-devel
+BuildRequires:	libgnomeui-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRequires:	zlib-devel
 Requires:	eject
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 GTKtalog is a disk catalog, it means you can use it to create a really
@@ -68,19 +69,21 @@ html, mpeg).
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
 %{__libtoolize}
 %{__gettextize}
-%{__aclocal} -I macros
+%{__aclocal} -I m4
 %{__autoheader}
-automake --add-missing --copy
+%{__automake}
 %{__autoconf}
 %configure \
 	--enable-pthreads \
 	--enable-catalog2 \
 	--enable-catalog3 \
+	--enable-gnome20 \
 	--enable-htmltitle \
 	--enable-mp3info \
 	--enable-modinfo \
@@ -101,7 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog Docs/README.{catalog3,data_representation} NEWS README TODO
 %attr(755,root,root) %{_bindir}/gtktalog
