@@ -1,6 +1,6 @@
 Summary:	The Gnome disk catalog
 Name:		gtktalog
-Version:	0.19.2
+Version:	0.99.5
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
@@ -110,7 +110,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz Docs/*.gz
 %attr(755,root,root) %{_bindir}/gtktalog
 %{_mandir}/man?/*
-%{_libdir}/gtktalog
+%dir %{_libdir}/gtktalog
+%attr(755,root,root) %{_libdir}/gtktalog
 %{_applnkdir}/Utilities/gtktalog.desktop
 %{_datadir}/gtktalog
 %{_pixmapsdir}/gtktalog.png
