@@ -2,7 +2,7 @@ diff -urN gtktalog-0.18.1.orig/Makefile.am gtktalog-0.18.1/Makefile.am
 --- gtktalog-0.18.1.orig/Makefile.am	Tue Apr 10 05:43:32 2001
 +++ gtktalog-0.18.1/Makefile.am	Tue May 15 11:10:12 2001
 @@ -1,5 +1,5 @@
- SUBDIRS=macros po intl src Docs
+ SUBDIRS= m4 po src Docs
 -Applicationsdir = $(datadir)/gnome/apps/Applications
 +Applicationsdir = $(datadir)/applnk
  Applications_DATA = gtktalog.desktop
