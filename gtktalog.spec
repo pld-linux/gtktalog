@@ -74,8 +74,8 @@ html, mpeg).
 rm -f missing
 %{__libtoolize}
 %{__gettextize}
-aclocal -I macros
-autoheader
+%{__aclocal} -I macros
+%{__autoheader}
 automake --add-missing --copy
 %{__autoconf}
 %configure \
