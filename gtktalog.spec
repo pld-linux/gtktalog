@@ -1,23 +1,25 @@
-Summary:	The Gnome disk catalog.
+Summary:	The Gnome disk catalog
 Name:		gtktalog
 Version:	0.18.1
 Release:	1
-Epoch:		0
 License:	GPL
 Group:		Applications/Archiving
 Group(de):	Applikationen/Archivierung
 Group(pl):	Aplikacje/Archiwizacja
 Source0:	ftp://gtktalog.sourceforge.net/pub/gtktalog/gtktalog/tgz/%{name}-%{version}.tar.gz
-Patch0:   %{name}-path.patch
-URL:		http://gtktalog.sourceforge.net
+Patch0:		%{name}-path.patch
+Patch1:		%{name}-DESTDIR.patch
+URL:		http://gtktalog.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	gnome-libs-devel
+BuildRequires:	libtool
+BuildRequires:	zlib-devel
+Requires:	eject
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Requires:	gnome-libs
-Requires: zlib
-BuildRequires: gnome-libs-devel
-BuildRequires: zlib-devel
 
-%define   _prefix   /usr/X11R6
-%define   _mandir   %{_prefix}/man
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
 GTKtalog is a disk catalog, it means you can use it to create a really
@@ -28,12 +30,14 @@ category and a description. You can search for files in your database
 with filename, category, description or file information parameter,
 and find in which CD the file you are looking for is.
 
-%description -l pl
-GTKtalog jest katalogiem dysków. Oznacza to, ¿e mo¿esz u¿ywac go do stworzenia
-ma³ej bazy zawarto¶ci swoich p³yt cd. Dziêku temu odnalezienie pliku o znanej
-nazwie (lub czê¶ci nazwy) staje siê kwesti± sekund a nie godzin.
-GTKtalog automatycznie rozpoznaje i odpowiedni kataloguje pliki wielu ró¿nych
-typów (tar, rpm, mp3, avi, html, mpeg).
+%description -l cs
+GTKtalog je katalog diskù, co¾ znamená ¾e jej mù¾ete pou¾ít k
+vytvoøení velmi malé databáze s obrazem souborù a adresáøù na va¹em
+CD-ROMu. Mù¾ete si pak snadno a rychle prohlí¾et va¹e CD, vidìt obsah
+nìkterých souborù (tar.gz, rpm balíèky, ...). Mù¾ete dát ka¾dému
+adresáøi a souboru kategorii a popis. Mù¾ete v databázi hledat soubory
+podle názvu, kategorie, popisu èi dal¹ích informací o souboru a najít,
+na kterém CD se hledané soubory nachází.
 
 %description -l fr
 GTKtalog est un catalogueur de disque. En d'autres termes, vous pouvez
@@ -54,21 +58,22 @@ bestand een categorie en beschrijving geven. Je kan bestanden zoeken
 op naam, categorie, beschrijving of bestandsinformatie. Zo vind je
 snel op welke CD het bestand dat je zoekt staat.
 
-%description -l cs
-GTKtalog je katalog diskù, co¾ znamená ¾e jej mù¾ete pou¾ít k
-vytvoøení velmi malé databáze s obrazem souborù a adresáøù na va¹em
-CD-ROMu. Mù¾ete si pak snadno a rychle prohlí¾et va¹e CD, vidìt obsah
-nìkterých souborù (tar.gz, rpm balíèky, ...). Mù¾ete dát ka¾dému
-adresáøi a souboru kategorii a popis. Mù¾ete v databázi hledat soubory
-podle názvu, kategorie, popisu èi dal¹ích informací o souboru a najít,
-na kterém CD se hledané soubory nachází.
+%description -l pl
+GTKtalog jest katalogiem dysków. Oznacza to, ¿e mo¿esz u¿ywac go do
+stworzenia ma³ej bazy zawarto¶ci swoich p³yt cd. Dziêku temu
+odnalezienie pliku o znanej nazwie (lub czê¶ci nazwy) staje siê
+kwesti± sekund a nie godzin. GTKtalog automatycznie rozpoznaje i
+odpowiedni kataloguje pliki wielu ró¿nych typów (tar, rpm, mp3, avi,
+html, mpeg).
 
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
+libtoolize --copy --force
 gettextize --copy --force
 %{__aclocal} -I macros
 %{__autoheader}
@@ -88,19 +93,25 @@ gettextize --copy --force
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	Applicationsdir=%{_applnkdir}/Utilities
+
+gzip -9nf AUTHORS ChangeLog Docs/README.{catalog3,data_representation} \
+	NEWS README TODO
+
+%find_lang %{name} --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ABOUT-NLS AUTHORS COPYING ChangeLog Docs/README.catalog3 Docs/README.data_representation NEWS README TODO
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/*
+%doc *.gz Docs/*.gz
+%attr(755,root,root) %{_bindir}/gtktalog
+%{_mandir}/man?/*
 %{_libdir}/gtktalog
-%{_applnkdir}/gtktalog.desktop
-%{_datadir}/gnome/help/gtktalog
+%{_applnkdir}/Utilities/gtktalog.desktop
 %{_datadir}/gtktalog
-%{_datadir}/locale/*/LC_MESSAGES/gtktalog.mo
-%{_datadir}/pixmaps/gtktalog.png
+%{_pixmapsdir}/gtktalog.png
