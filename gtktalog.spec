@@ -1,4 +1,4 @@
-Summary:	The Gnome disk catalog
+Summary:	The GNOME disk catalog
 Summary(pl):	Program do katalogowania p³yt CD dla ¶rodowiska GNOME
 Name:		gtktalog
 Version:	1.0.3
