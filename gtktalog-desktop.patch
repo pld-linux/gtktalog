@@ -1,0 +1,9 @@
+diff -urN aaa/gtktalog-1.0.4/gtktalog.desktop gtktalog-1.0.4/gtktalog.desktop
+--- aaa/gtktalog-1.0.4/gtktalog.desktop	2003-05-08 11:22:19.000000000 +0200
++++ gtktalog-1.0.4/gtktalog.desktop	2003-12-12 23:35:43.000000000 +0100
+@@ -20,4 +20,4 @@
+ Icon=gtktalog.png
+ Terminal=false
+ Type=Application
+-Categories=Application;Utility
++Categories=Application;Utility;
