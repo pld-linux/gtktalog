@@ -73,7 +73,7 @@ html, mpeg).
 %build
 rm -f missing
 %{__libtoolize}
-gettextize --copy --force
+%{__gettextize}
 aclocal -I macros
 autoheader
 automake --add-missing --copy
