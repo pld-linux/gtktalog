@@ -72,7 +72,7 @@ html, mpeg).
 
 %build
 rm -f missing
-libtoolize --copy --force
+%{__libtoolize}
 gettextize --copy --force
 aclocal -I macros
 autoheader
