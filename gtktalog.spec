@@ -5,8 +5,8 @@ Version:	0.99.19
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
-Source0:	http://freesoftware.fsf.org/download/gtktalog/gtktalog/sources/%{name}-%{version}.tar.bz2
-# Source0-md5:	0b1961a58b5bfef4f8dd56f92b943188
+Source0:	http://savannah.nongnu.org/download/gtktalog/gtktalog.pkg/%{version}/%{name}-%{version}.tar.bz2
+# Source0-md5:	90ff0a0e8b80383237ef10fff636417a
 Patch0:		%{name}-path.patch
 URL:		http://www.freesoftware.fsf.org/gtktalog/
 BuildRequires:	autoconf
