@@ -68,7 +68,7 @@ GTKtalog jest katalogiem dysków. Oznacza to, ¿e mo¿esz u¿ywaæ go do
 stworzenia ma³ej bazy zawarto¶ci swoich p³yt cd. Dziêki temu
 odnalezienie pliku o znanej nazwie (lub czê¶ci nazwy) staje siê
 kwesti± sekund a nie godzin. GTKtalog automatycznie rozpoznaje 
-i odpowiednio kataloguje pliki wielu ró¿nych typów (tar, rpm, mp3, 
+i odpowiednio kataloguje pliki wielu ró¿nych typów (tar, rpm, MP3, 
 avi, html, mpeg).
 
 %prep
