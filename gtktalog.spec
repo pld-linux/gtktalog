@@ -2,7 +2,7 @@ Summary:	The GNOME disk catalog
 Summary(pl):	Program do katalogowania p³yt CD dla ¶rodowiska GNOME
 Name:		gtktalog
 Version:	1.0.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://savannah.nongnu.org/download/%{name}/%{name}.pkg/%{version}/%{name}-%{version}.tar.bz2
@@ -100,7 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	Applicationsdir=%{_applnkdir}/Utilities
+	Applicationsdir=%{_desktopdir}
 
 %find_lang %{name} --with-gnome
 
@@ -114,6 +114,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/*
-%{_applnkdir}/Utilities/*
+%{_desktopdir}/*
 %{_datadir}/%{name}
 %{_pixmapsdir}/*
