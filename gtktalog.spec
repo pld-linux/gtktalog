@@ -1,6 +1,6 @@
 Summary:	The Gnome disk catalog
 Name:		gtktalog
-Version:	0.99.6
+Version:	0.99.7
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
@@ -74,10 +74,10 @@ html, mpeg).
 rm -f missing
 libtoolize --copy --force
 gettextize --copy --force
-%{__aclocal} -I macros
-%{__autoheader}
-%{__automake} --add-missing --copy
-%{__autoconf}
+aclocal -I macros
+autoheader
+automake --add-missing --copy
+autoconf
 %configure \
 	--enable-pthreads \
 	--enable-catalog2 \
