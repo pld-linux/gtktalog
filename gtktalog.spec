@@ -10,9 +10,9 @@ Patch0:		%{name}-path.patch
 URL:		http://www.freesoftware.fsf.org/gtktalog/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	libstdc++-devel
-BuildRequires:	gettext-devel
 BuildRequires:	libtool
 BuildRequires:	zlib-devel
 Requires:	eject
@@ -104,8 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog Docs/README.{catalog3,data_representation} \
-	NEWS README TODO
+%doc AUTHORS ChangeLog Docs/README.{catalog3,data_representation} NEWS README TODO
 %attr(755,root,root) %{_bindir}/gtktalog
 %{_mandir}/man?/*
 %dir %{_libdir}/gtktalog
