@@ -1,6 +1,6 @@
 Summary:	The Gnome disk catalog
 Name:		gtktalog
-Version:	0.18.1
+Version:	0.19.2
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
@@ -8,11 +8,11 @@ Group(de):	Applikationen/Archivierung
 Group(pl):	Aplikacje/Archiwizacja
 Source0:	ftp://gtktalog.sourceforge.net/pub/gtktalog/gtktalog/tgz/%{name}-%{version}.tar.gz
 Patch0:		%{name}-path.patch
-Patch1:		%{name}-DESTDIR.patch
 URL:		http://gtktalog.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gnome-libs-devel
+BuildRequires:	gettext-devel
 BuildRequires:	libtool
 BuildRequires:	zlib-devel
 Requires:	eject
@@ -69,7 +69,6 @@ html, mpeg).
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 rm -f missing
