@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://savannah.nongnu.org/download/gtktalog/gtktalog.pkg/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	90ff0a0e8b80383237ef10fff636417a
+# Source0-md5:	ac1c64dbe62ad7d6620ec94d094187b7
 Patch0:		%{name}-path.patch
 Patch1:		%{name}-amfix.patch
 URL:		http://www.freesoftware.fsf.org/gtktalog/
