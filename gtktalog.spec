@@ -111,7 +111,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/gtktalog
 %{_mandir}/man?/*
 %dir %{_libdir}/gtktalog
-%attr(755,root,root) %{_libdir}/gtktalog
+%attr(755,root,root) %{_libdir}/gtktalog/*
 %{_applnkdir}/Utilities/gtktalog.desktop
 %{_datadir}/gtktalog
 %{_pixmapsdir}/gtktalog.png
