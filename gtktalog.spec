@@ -1,13 +1,13 @@
 Summary:	The Gnome disk catalog
 Summary(pl):	Program do katalogowania p³yt CD dla ¶rodowiska GNOME
 Name:		gtktalog
-Version:	0.99.11
+Version:	0.99.12
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
 Group(de):	Applikationen/Archivierung
 Group(pl):	Aplikacje/Archiwizacja
-Source0:	ftp://gtktalog.sourceforge.net/pub/gtktalog/gtktalog/tgz/%{name}-%{version}.tar.gz
+Source0:	http://prdownloads.sourceforge.net/gtktalog/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-path.patch
 URL:		http://gtktalog.sourceforge.net/
 BuildRequires:	autoconf
