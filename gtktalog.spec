@@ -61,12 +61,12 @@ op naam, categorie, beschrijving of bestandsinformatie. Zo vind je
 snel op welke CD het bestand dat je zoekt staat.
 
 %description -l pl
-GTKtalog jest katalogiem dysków. Oznacza to, ¿e mo¿esz u¿ywac go do
-stworzenia ma³ej bazy zawarto¶ci swoich p³yt cd. Dziêku temu
+GTKtalog jest katalogiem dysków. Oznacza to, ¿e mo¿esz u¿ywaæ go do
+stworzenia ma³ej bazy zawarto¶ci swoich p³yt cd. Dziêki temu
 odnalezienie pliku o znanej nazwie (lub czê¶ci nazwy) staje siê
-kwesti± sekund a nie godzin. GTKtalog automatycznie rozpoznaje i
-odpowiedni kataloguje pliki wielu ró¿nych typów (tar, rpm, mp3, avi,
-html, mpeg).
+kwesti± sekund a nie godzin. GTKtalog automatycznie rozpoznaje 
+i odpowiednio kataloguje pliki wielu ró¿nych typów (tar, rpm, mp3, 
+avi, html, mpeg).
 
 %prep
 %setup -q
