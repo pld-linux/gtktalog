@@ -1,0 +1,13 @@
+--- gtktalog-1.0.2/src/gtktalog/Makefile.am.orig	Fri Mar 28 22:46:03 2003
++++ gtktalog-1.0.2/src/gtktalog/Makefile.am	Fri Jun 27 15:25:43 2003
+@@ -52,8 +52,8 @@
+ CLEANFILES=config_lex.c config_parse.c config_parse.h gtktalog.cf gtktalog.cf.in
+ 
+ eject_SOURCES = eject.c
+-eject_LDADD = @GTK_LIBS@ @GNOMEUI_LIBS@ @LIBINTL@
+-eject_LDFLAGS = $(LDFLAGS)  @GNOME_LIBDIR@ @GNOME_INCLUDEDIR@
++eject_LDADD = @EXTRA_GNOME_LIBS@ $(LIBINTL)
++#eject_LDFLAGS = $(LDFLAGS)  @GNOME_LIBDIR@ @GNOME_INCLUDEDIR@
+ 
+ confdir = $(pkgdatadir)
+ conf_DATA = gtktalog.cf
