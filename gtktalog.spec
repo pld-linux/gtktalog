@@ -1,6 +1,6 @@
 Summary:	The Gnome disk catalog
 Name:		gtktalog
-Version:	0.99.5
+Version:	0.99.6
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
