@@ -65,9 +65,11 @@ na kterém CD se hledané soubory nachází.
 
 %prep
 %setup -q
-#%patch0 -p1
+%patch0 -p1
 
 %build
+rm -f missing
+gettextize --copy --force
 %{__aclocal} -I macros
 %{__autoheader}
 %{__automake} --add-missing --copy
