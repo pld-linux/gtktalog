@@ -6,4 +6,4 @@ diff -urN aaa/gtktalog-1.0.4/gtktalog.desktop gtktalog-1.0.4/gtktalog.desktop
  Terminal=false
  Type=Application
 -Categories=Application;Utility
-+Categories=Application;Utility;
++Categories=GTK;GNOME;Utility;
