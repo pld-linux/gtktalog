@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://freesoftware.fsf.org/download/gtktalog/gtktalog/sources/%{name}-%{version}.tar.bz2
+# Source0-md5:	0b1961a58b5bfef4f8dd56f92b943188
 Patch0:		%{name}-path.patch
 URL:		http://www.freesoftware.fsf.org/gtktalog/
 BuildRequires:	autoconf
