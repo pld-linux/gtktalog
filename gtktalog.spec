@@ -18,8 +18,6 @@ BuildRequires:	zlib-devel
 Requires:	eject
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 GTKtalog is a disk catalog, it means you can use it to create a really
