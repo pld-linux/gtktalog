@@ -9,7 +9,7 @@ Version:	1.0.4
 Release:	4
 License:	GPL
 Group:		Applications/Archiving
-Source0:	http://savannah.nongnu.org/download/%{name}/%{name}.pkg/%{version}/%{name}-%{version}.tar.bz2
+Source0:	http://savannah.nongnu.org/download/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	54ed43256a0d11d078f67485e0a80e0a
 Patch0:		%{name}-path.patch
 Patch1:		%{name}-amfix.patch
