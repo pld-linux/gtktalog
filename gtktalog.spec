@@ -1,6 +1,5 @@
 #
-# Note: it's not work with -enable-gnome20
-# and gtk2
+# Note: it doesn't work with --enable-gnome20 and gtk2
 #
 Summary:	The GNOME disk catalog
 Summary(pl):	Program do katalogowania p³yt CD dla ¶rodowiska GNOME
@@ -9,7 +8,7 @@ Version:	1.0.4
 Release:	4
 License:	GPL
 Group:		Applications/Archiving
-Source0:	http://savannah.nongnu.org/download/%{name}/%{name}-%{version}.tar.bz2
+Source0:	http://savannah.nongnu.org/download/gtktalog/%{name}-%{version}.tar.bz2
 # Source0-md5:	54ed43256a0d11d078f67485e0a80e0a
 Patch0:		%{name}-path.patch
 Patch1:		%{name}-amfix.patch
@@ -78,7 +77,6 @@ avi, html, mpeg).
 %patch2 -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__gettextize}
 %{__aclocal} -I m4
