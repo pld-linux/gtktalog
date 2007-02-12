@@ -2,7 +2,7 @@
 # Note: it doesn't work with --enable-gnome20 and gtk2
 #
 Summary:	The GNOME disk catalog
-Summary(pl):	Program do katalogowania p³yt CD dla ¶rodowiska GNOME
+Summary(pl.UTF-8):   Program do katalogowania pÅ‚yt CD dla Å›rodowiska GNOME
 Name:		gtktalog
 Version:	1.0.4
 Release:	4
@@ -34,26 +34,26 @@ category and a description. You can search for files in your database
 with filename, category, description or file information parameter,
 and find in which CD the file you are looking for is.
 
-%description -l cs
-GTKtalog je katalog diskù, co¾ znamená ¾e jej mù¾ete pou¾ít k
-vytvoøení velmi malé databáze s obrazem souborù a adresáøù na va¹em
-CD-ROMu. Mù¾ete si pak snadno a rychle prohlí¾et va¹e CD, vidìt obsah
-nìkterıch souborù (tar.gz, rpm balíèky, ...). Mù¾ete dát ka¾dému
-adresáøi a souboru kategorii a popis. Mù¾ete v databázi hledat soubory
-podle názvu, kategorie, popisu èi dal¹ích informací o souboru a najít,
-na kterém CD se hledané soubory nachází.
+%description -l cs.UTF-8
+GTKtalog je katalog diskÅ¯, coÅ¾ znamenÃ¡ Å¾e jej mÅ¯Å¾ete pouÅ¾Ã­t k
+vytvoÅ™enÃ­ velmi malÃ© databÃ¡ze s obrazem souborÅ¯ a adresÃ¡Å™Å¯ na vaÅ¡em
+CD-ROMu. MÅ¯Å¾ete si pak snadno a rychle prohlÃ­Å¾et vaÅ¡e CD, vidÄ›t obsah
+nÄ›kterÃ½ch souborÅ¯ (tar.gz, rpm balÃ­Äky, ...). MÅ¯Å¾ete dÃ¡t kaÅ¾dÃ©mu
+adresÃ¡Å™i a souboru kategorii a popis. MÅ¯Å¾ete v databÃ¡zi hledat soubory
+podle nÃ¡zvu, kategorie, popisu Äi dalÅ¡Ã­ch informacÃ­ o souboru a najÃ­t,
+na kterÃ©m CD se hledanÃ© soubory nachÃ¡zÃ­.
 
-%description -l fr
+%description -l fr.UTF-8
 GTKtalog est un catalogueur de disque. En d'autres termes, vous pouvez
-l'utiliser pour créer une vraiment petite base de données avec les
-images des fichiers et répertoires de votre CD-rom. Vous pouvez ainsi
-lire tous vos CD très rapidement, voir le contenu de certains fichiers
-(tar.gz, fichiers rpm...). Vous pouvez attribuer à chaque répertoire
-ou fichier une catégorie, une description ou des paramètres concernant
+l'utiliser pour crÃ©er une vraiment petite base de donnÃ©es avec les
+images des fichiers et rÃ©pertoires de votre CD-rom. Vous pouvez ainsi
+lire tous vos CD trÃ¨s rapidement, voir le contenu de certains fichiers
+(tar.gz, fichiers rpm...). Vous pouvez attribuer Ã  chaque rÃ©pertoire
+ou fichier une catÃ©gorie, une description ou des paramÃ¨tres concernant
 les informations du fichier. Et ainsi vous pouvez trouver dans quel CD
 se trouve le fichier que vous cherchez.
 
-%description -l nl
+%description -l nl.UTF-8
 GTKtalog is een schijvencatalogeerder. Je kan er kleine databanken mee
 maken, die informatie van vele CD-roms en diskettes bevatten. Dus kan
 je heel snel al je CD's doorzoeken, de inhoud van sommige bestanden
@@ -62,12 +62,12 @@ bestand een categorie en beschrijving geven. Je kan bestanden zoeken
 op naam, categorie, beschrijving of bestandsinformatie. Zo vind je
 snel op welke CD het bestand dat je zoekt staat.
 
-%description -l pl
-GTKtalog jest katalogiem dysków. Oznacza to, ¿e mo¿esz u¿ywaæ go do
-stworzenia ma³ej bazy zawarto¶ci swoich p³yt cd. Dziêki temu
-odnalezienie pliku o znanej nazwie (lub czê¶ci nazwy) staje siê
-kwesti± sekund a nie godzin. GTKtalog automatycznie rozpoznaje 
-i odpowiednio kataloguje pliki wielu ró¿nych typów (tar, rpm, MP3, 
+%description -l pl.UTF-8
+GTKtalog jest katalogiem dyskÃ³w. Oznacza to, Å¼e moÅ¼esz uÅ¼ywaÄ‡ go do
+stworzenia maÅ‚ej bazy zawartoÅ›ci swoich pÅ‚yt cd. DziÄ™ki temu
+odnalezienie pliku o znanej nazwie (lub czÄ™Å›ci nazwy) staje siÄ™
+kwestiÄ… sekund a nie godzin. GTKtalog automatycznie rozpoznaje 
+i odpowiednio kataloguje pliki wielu rÃ³Å¼nych typÃ³w (tar, rpm, MP3, 
 avi, html, mpeg).
 
 %prep
