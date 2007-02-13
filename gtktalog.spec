@@ -2,7 +2,7 @@
 # Note: it doesn't work with --enable-gnome20 and gtk2
 #
 Summary:	The GNOME disk catalog
-Summary(pl.UTF-8):   Program do katalogowania płyt CD dla środowiska GNOME
+Summary(pl.UTF-8):	Program do katalogowania płyt CD dla środowiska GNOME
 Name:		gtktalog
 Version:	1.0.4
 Release:	4
