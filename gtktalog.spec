@@ -5,7 +5,7 @@ Summary:	The GNOME disk catalog
 Summary(pl.UTF-8):	Program do katalogowania płyt CD dla środowiska GNOME
 Name:		gtktalog
 Version:	1.0.4
-Release:	4
+Release:	5
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://savannah.nongnu.org/download/gtktalog/%{name}-%{version}.tar.bz2
@@ -14,10 +14,11 @@ Patch0:		%{name}-path.patch
 Patch1:		%{name}-amfix.patch
 Patch2:		%{name}-desktop.patch
 URL:		http://www.freesoftware.fsf.org/gtktalog/
+BuildRequires:	STLport-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	compat-gcc-34-c++
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-libs-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -66,9 +67,9 @@ snel op welke CD het bestand dat je zoekt staat.
 GTKtalog jest katalogiem dysków. Oznacza to, że możesz używać go do
 stworzenia małej bazy zawartości swoich płyt cd. Dzięki temu
 odnalezienie pliku o znanej nazwie (lub części nazwy) staje się
-kwestią sekund a nie godzin. GTKtalog automatycznie rozpoznaje 
-i odpowiednio kataloguje pliki wielu różnych typów (tar, rpm, MP3, 
-avi, html, mpeg).
+kwestią sekund a nie godzin. GTKtalog automatycznie rozpoznaje i
+odpowiednio kataloguje pliki wielu różnych typów (tar, rpm, MP3, avi,
+html, mpeg).
 
 %prep
 %setup -q
@@ -85,8 +86,9 @@ avi, html, mpeg).
 %{__autoconf}
 
 %configure \
-	--disable-gnome20 \
+	CPPFLAGS="-I%{_libdir}/gcc/i686-pld-linux/3.4.6/include/c++/backward" \
 	--disable-gnomevfs \
+	--enable-gnome20 \
 	--enable-pthreads \
 	--enable-catalog2 \
 	--enable-catalog3 \
@@ -97,7 +99,7 @@ avi, html, mpeg).
 	--enable-mpeginfo \
 	--enable-fixcd \
 	--disable-eject
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
