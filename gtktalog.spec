@@ -18,7 +18,7 @@ BuildRequires:	STLport-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	compat-gcc-34-c++
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
